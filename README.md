@@ -1,5 +1,3 @@
-# apollo-laravel
-
 ### Install PHP dependencies
 ```
 composer install
