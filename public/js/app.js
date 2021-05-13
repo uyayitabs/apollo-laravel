@@ -1911,14 +1911,12 @@ __webpack_require__.r(__webpack_exports__);
     var _this = this;
 
     this.axios.get('http://localhost:8000/api/randoms/').then(function (response) {
-      _this.randoms = response.data.data;
       response.data.data.forEach(function (item) {
         _this.fulltext += item.values;
         item.breakdowns.forEach(function (subItem) {
           _this.fulltext += " " + subItem.values;
         });
       });
-      console.error(_this.fulltext);
     });
   }
 });

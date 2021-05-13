@@ -36,14 +36,12 @@
             this.axios
                 .get('http://localhost:8000/api/randoms/')
                 .then(response => {
-                    this.randoms = response.data.data;
                     response.data.data.forEach(item => {
                         this.fulltext += item.values;
                         item.breakdowns.forEach(subItem => {
                             this.fulltext += " " + subItem.values;
                         });
                     })
-                    console.error(this.fulltext);
                 });
         }
     }
